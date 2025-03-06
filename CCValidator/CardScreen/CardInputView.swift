@@ -38,12 +38,23 @@ struct CardInputView<ViewModel: CardValidatorRepresentable>: View {
     
     var cardInputField: some View {
         TextField(Theme.Strings.enterCardNumber, text: $viewModel.cardNumber)
+            .textFieldStyle(.plain)
+            .foregroundColor(Theme.Colors.textColor)
+            .tint(Theme.Colors.textColor)
             .keyboardType(.numberPad)
             .textFieldStyle(RoundedBorderTextFieldStyle())
-            .padding()
+            .padding(.horizontal)
+            .padding(.vertical, 6)
             .onChange(of: viewModel.cardNumber) { oldValue, newValue in
-                viewModel.cardNumber = newValue.filter { $0.isNumber }
+                let num = newValue.filter { $0.isNumber }
+                if num.count > 20 {
+                    viewModel.cardNumber = String(newValue.prefix(20))
+                }
             }
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(Theme.Colors.textColor, lineWidth: 1)
+            )
     }
     
     var cardValidationView: some View {
