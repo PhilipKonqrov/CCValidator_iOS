@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "DC8BE875-7051-406C-A1FA-D7BE06916CFD",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:CCValidator.xcodeproj",
+      "identifier" : "049F95FF2D789792003D78D4",
+      "name" : "CCValidator"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CCValidator.xcodeproj",
+        "identifier" : "049F96102D789795003D78D4",
+        "name" : "CCValidatorTests"
+      }
+    }
+  ],
+  "version" : 1
+}

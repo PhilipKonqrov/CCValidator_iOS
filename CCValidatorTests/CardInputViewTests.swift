@@ -1,0 +1,52 @@
+//
+//  CardInputViewTests.swift
+//  CCValidatorTests
+//
+//  Created by mac on 6.03.25.
+//
+
+import Testing
+import SwiftUI
+import ViewInspector
+
+@testable import CCValidator
+
+@MainActor
+final class CardInputViewTests {
+    class MockCardValidatorModel: CardValidatorRepresentable {
+        @Published var cardNumber: String = ""
+        var cardType: CardType = .visa
+        var isValid: Bool = true
+        var brandImageName: String? = "visa"
+        
+        func detectCardType(from number: String) -> CardType { .visa }
+        func isValidCard(_ number: String) -> Bool { true }
+    }
+
+    @Test
+    func testViewHasTextField() throws {
+        let viewModel = MockCardValidatorModel()
+        let view = CardInputView(viewModel: viewModel)
+
+        let textField = try view.inspect().find(ViewType.TextField.self)
+        #expect(textField != nil)
+    }
+
+    @Test
+    func testViewHasValidationText() throws {
+        let viewModel = MockCardValidatorModel()
+        let view = CardInputView(viewModel: viewModel)
+
+        let text = try view.inspect().find(text: Theme.Strings.valid)
+        #expect(text != nil)
+    }
+
+    @Test
+    func testViewDisplaysCorrectImageForBrand() throws {
+        let viewModel = MockCardValidatorModel()
+        let view = CardInputView(viewModel: viewModel)
+
+        let image = try view.inspect().find(ViewType.Image.self)
+        #expect(image != nil)
+    }
+}
