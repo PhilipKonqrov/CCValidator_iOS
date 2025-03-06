@@ -11,7 +11,7 @@ import SwiftUI
 struct CCValidatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CardInputView(viewModel: CardValidatorModel())
         }
     }
 }

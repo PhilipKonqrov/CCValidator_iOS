@@ -8,23 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		049F96042D789792003D78D4 /* CCValidatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F96032D789792003D78D4 /* CCValidatorApp.swift */; };
-		049F96062D789792003D78D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F96052D789792003D78D4 /* ContentView.swift */; };
+		049F96062D789792003D78D4 /* CardInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F96052D789792003D78D4 /* CardInputView.swift */; };
 		049F96082D789795003D78D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049F96072D789795003D78D4 /* Assets.xcassets */; };
 		049F960C2D789795003D78D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049F960B2D789795003D78D4 /* Preview Assets.xcassets */; };
-		049F96162D789795003D78D4 /* CCValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F96152D789795003D78D4 /* CCValidatorTests.swift */; };
-		049F96202D789795003D78D4 /* CCValidatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F961F2D789795003D78D4 /* CCValidatorUITests.swift */; };
-		049F96222D789795003D78D4 /* CCValidatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F96212D789795003D78D4 /* CCValidatorUITestsLaunchTests.swift */; };
+		049F96162D789795003D78D4 /* CardValidatorModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F96152D789795003D78D4 /* CardValidatorModelTests.swift */; };
+		04B58A2A2D79889300146211 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B58A292D79889300146211 /* CardViewModel.swift */; };
+		04B58A2C2D79B7F300146211 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B58A2B2D79B7F200146211 /* Theme.swift */; };
+		04B58A2E2D79B91100146211 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 04B58A2D2D79B91100146211 /* Localizable.xcstrings */; };
+		04B58A302D79C07E00146211 /* ThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B58A2F2D79C07E00146211 /* ThemeTests.swift */; };
+		04B58A322D79CC0800146211 /* CardInputViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B58A312D79CC0800146211 /* CardInputViewTests.swift */; };
+		923AAA2E2D79D10F00AE35AA /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 923AAA2D2D79D10F00AE35AA /* ViewInspector */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		049F96122D789795003D78D4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 049F95F82D789792003D78D4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 049F95FF2D789792003D78D4;
-			remoteInfo = CCValidator;
-		};
-		049F961C2D789795003D78D4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 049F95F82D789792003D78D4 /* Project object */;
 			proxyType = 1;
@@ -36,15 +33,18 @@
 /* Begin PBXFileReference section */
 		049F96002D789792003D78D4 /* CCValidator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCValidator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049F96032D789792003D78D4 /* CCValidatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCValidatorApp.swift; sourceTree = "<group>"; };
-		049F96052D789792003D78D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		049F96052D789792003D78D4 /* CardInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInputView.swift; sourceTree = "<group>"; };
 		049F96072D789795003D78D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		049F96092D789795003D78D4 /* CCValidator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CCValidator.entitlements; sourceTree = "<group>"; };
 		049F960B2D789795003D78D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		049F96112D789795003D78D4 /* CCValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		049F96152D789795003D78D4 /* CCValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCValidatorTests.swift; sourceTree = "<group>"; };
-		049F961B2D789795003D78D4 /* CCValidatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCValidatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		049F961F2D789795003D78D4 /* CCValidatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCValidatorUITests.swift; sourceTree = "<group>"; };
-		049F96212D789795003D78D4 /* CCValidatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCValidatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		049F96152D789795003D78D4 /* CardValidatorModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidatorModelTests.swift; sourceTree = "<group>"; };
+		04B58A292D79889300146211 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		04B58A2B2D79B7F200146211 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		04B58A2D2D79B91100146211 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		04B58A2F2D79C07E00146211 /* ThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTests.swift; sourceTree = "<group>"; };
+		04B58A312D79CC0800146211 /* CardInputViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInputViewTests.swift; sourceTree = "<group>"; };
+		9252527A2D79DE7B009DBAA2 /* CCValidator.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CCValidator.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		049F96182D789795003D78D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				923AAA2E2D79D10F00AE35AA /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +69,9 @@
 		049F95F72D789792003D78D4 = {
 			isa = PBXGroup;
 			children = (
+				9252527A2D79DE7B009DBAA2 /* CCValidator.xctestplan */,
 				049F96022D789792003D78D4 /* CCValidator */,
 				049F96142D789795003D78D4 /* CCValidatorTests */,
-				049F961E2D789795003D78D4 /* CCValidatorUITests */,
 				049F96012D789792003D78D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +81,6 @@
 			children = (
 				049F96002D789792003D78D4 /* CCValidator.app */,
 				049F96112D789795003D78D4 /* CCValidatorTests.xctest */,
-				049F961B2D789795003D78D4 /* CCValidatorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +88,11 @@
 		049F96022D789792003D78D4 /* CCValidator */ = {
 			isa = PBXGroup;
 			children = (
+				925252792D79DC8F009DBAA2 /* CardScreen */,
 				049F96032D789792003D78D4 /* CCValidatorApp.swift */,
-				049F96052D789792003D78D4 /* ContentView.swift */,
+				04B58A2B2D79B7F200146211 /* Theme.swift */,
 				049F96072D789795003D78D4 /* Assets.xcassets */,
+				04B58A2D2D79B91100146211 /* Localizable.xcstrings */,
 				049F96092D789795003D78D4 /* CCValidator.entitlements */,
 				049F960A2D789795003D78D4 /* Preview Content */,
 			);
@@ -115,18 +110,20 @@
 		049F96142D789795003D78D4 /* CCValidatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				049F96152D789795003D78D4 /* CCValidatorTests.swift */,
+				049F96152D789795003D78D4 /* CardValidatorModelTests.swift */,
+				04B58A2F2D79C07E00146211 /* ThemeTests.swift */,
+				04B58A312D79CC0800146211 /* CardInputViewTests.swift */,
 			);
 			path = CCValidatorTests;
 			sourceTree = "<group>";
 		};
-		049F961E2D789795003D78D4 /* CCValidatorUITests */ = {
+		925252792D79DC8F009DBAA2 /* CardScreen */ = {
 			isa = PBXGroup;
 			children = (
-				049F961F2D789795003D78D4 /* CCValidatorUITests.swift */,
-				049F96212D789795003D78D4 /* CCValidatorUITestsLaunchTests.swift */,
+				049F96052D789792003D78D4 /* CardInputView.swift */,
+				04B58A292D79889300146211 /* CardViewModel.swift */,
 			);
-			path = CCValidatorUITests;
+			path = CardScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,24 +164,6 @@
 			productReference = 049F96112D789795003D78D4 /* CCValidatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		049F961A2D789795003D78D4 /* CCValidatorUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 049F962B2D789795003D78D4 /* Build configuration list for PBXNativeTarget "CCValidatorUITests" */;
-			buildPhases = (
-				049F96172D789795003D78D4 /* Sources */,
-				049F96182D789795003D78D4 /* Frameworks */,
-				049F96192D789795003D78D4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				049F961D2D789795003D78D4 /* PBXTargetDependency */,
-			);
-			name = CCValidatorUITests;
-			productName = CCValidatorUITests;
-			productReference = 049F961B2D789795003D78D4 /* CCValidatorUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,10 +181,6 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 049F95FF2D789792003D78D4;
 					};
-					049F961A2D789795003D78D4 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 049F95FF2D789792003D78D4;
-					};
 				};
 			};
 			buildConfigurationList = 049F95FB2D789792003D78D4 /* Build configuration list for PBXProject "CCValidator" */;
@@ -217,13 +192,15 @@
 				Base,
 			);
 			mainGroup = 049F95F72D789792003D78D4;
+			packageReferences = (
+				923AAA2C2D79D10F00AE35AA /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 049F96012D789792003D78D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				049F95FF2D789792003D78D4 /* CCValidator */,
 				049F96102D789795003D78D4 /* CCValidatorTests */,
-				049F961A2D789795003D78D4 /* CCValidatorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,17 +212,11 @@
 			files = (
 				049F960C2D789795003D78D4 /* Preview Assets.xcassets in Resources */,
 				049F96082D789795003D78D4 /* Assets.xcassets in Resources */,
+				04B58A2E2D79B91100146211 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		049F960F2D789795003D78D4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		049F96192D789795003D78D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,8 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049F96062D789792003D78D4 /* ContentView.swift in Sources */,
+				049F96062D789792003D78D4 /* CardInputView.swift in Sources */,
+				04B58A2C2D79B7F300146211 /* Theme.swift in Sources */,
 				049F96042D789792003D78D4 /* CCValidatorApp.swift in Sources */,
+				04B58A2A2D79889300146211 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,16 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049F96162D789795003D78D4 /* CCValidatorTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		049F96172D789795003D78D4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				049F96202D789795003D78D4 /* CCValidatorUITests.swift in Sources */,
-				049F96222D789795003D78D4 /* CCValidatorUITestsLaunchTests.swift in Sources */,
+				049F96162D789795003D78D4 /* CardValidatorModelTests.swift in Sources */,
+				04B58A302D79C07E00146211 /* ThemeTests.swift in Sources */,
+				04B58A322D79CC0800146211 /* CardInputViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,11 +254,6 @@
 			isa = PBXTargetDependency;
 			target = 049F95FF2D789792003D78D4 /* CCValidator */;
 			targetProxy = 049F96122D789795003D78D4 /* PBXContainerItemProxy */;
-		};
-		049F961D2D789795003D78D4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 049F95FF2D789792003D78D4 /* CCValidator */;
-			targetProxy = 049F961C2D789795003D78D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -420,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CCValidator/Preview Content\"";
+				DEVELOPMENT_TEAM = MHK4AT6N44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -430,8 +392,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -440,10 +401,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.philipKo.CCValidator.CCValidator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -456,6 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CCValidator/Preview Content\"";
+				DEVELOPMENT_TEAM = MHK4AT6N44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -466,8 +429,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -476,20 +438,21 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.philipKo.CCValidator.CCValidator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		049F96292D789795003D78D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MHK4AT6N44;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
@@ -508,10 +471,10 @@
 		049F962A2D789795003D78D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MHK4AT6N44;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
@@ -524,48 +487,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CCValidator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CCValidator";
-			};
-			name = Release;
-		};
-		049F962C2D789795003D78D4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MACOSX_DEPLOYMENT_TARGET = 13.6;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.philipKo.CCValidator.CCValidatorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CCValidator;
-			};
-			name = Debug;
-		};
-		049F962D2D789795003D78D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MACOSX_DEPLOYMENT_TARGET = 13.6;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.philipKo.CCValidator.CCValidatorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CCValidator;
 			};
 			name = Release;
 		};
@@ -599,16 +520,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		049F962B2D789795003D78D4 /* Build configuration list for PBXNativeTarget "CCValidatorUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				049F962C2D789795003D78D4 /* Debug */,
-				049F962D2D789795003D78D4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		923AAA2C2D79D10F00AE35AA /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		923AAA2D2D79D10F00AE35AA /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 923AAA2C2D79D10F00AE35AA /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 049F95F82D789792003D78D4 /* Project object */;
 }
