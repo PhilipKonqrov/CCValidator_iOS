@@ -1,5 +1,5 @@
 //
-//  CardValidatorModelTests.swift
+//  CardViewModelTests.swift
 //  CCValidatorTests
 //
 //  Created by mac on 5.03.25.
@@ -8,75 +8,65 @@
 import Testing
 @testable import CCValidator
 
-class CardValidatorModelTests {
-    var viewModel: CardValidatorModel!
-    let validVisa = "4111111111111111"
-    let validMasterCard = "5105105105105100"
-    let validDiscover = "6011111111111117"
-    let validAmex = "378282246310005"
-
+class CardViewModelTests {
+    var mockValidator: MockCardValidator!
+    var viewModel: CardViewModel!
+    
     init() {
-        viewModel = CardValidatorModel()
+        mockValidator = MockCardValidator()
+        viewModel = CardViewModel(validator: mockValidator)
     }
-
+    
     deinit {
+        mockValidator = nil
         viewModel = nil
     }
-
+    
     @Test
-    func testDetectCardType() {
-        #expect(viewModel.detectCardType(from: validAmex) == .amex)
-        #expect(viewModel.detectCardType(from: validDiscover) == .discover)
-        #expect(viewModel.detectCardType(from: validMasterCard) == .masterCard)
-        #expect(viewModel.detectCardType(from: validVisa) == .visa)
-        #expect(viewModel.detectCardType(from: "123456789") == .unknown)
+    func testCardTypeDetection() {
+        mockValidator.detectedCardType = .visa
+        #expect(viewModel.cardType == .visa)
+        
+        mockValidator.detectedCardType = .amex
+        #expect(viewModel.cardType == .amex)
     }
-
+    
     @Test
-    func testIsValidCard() {
-        #expect(viewModel.isValidCard(validVisa))
-        #expect(viewModel.isValidCard(validAmex))
-        #expect(viewModel.isValidCard(validDiscover))
-        #expect(viewModel.isValidCard(validMasterCard))
-        #expect(!viewModel.isValidCard("123456789"))
-        #expect(!viewModel.isValidCard(""))
-        #expect(!viewModel.isValidCard("abcd1234"))
-    }
-
-    @Test
-    func testBrandImageName() {
-        viewModel.cardNumber = validAmex
-        #expect(viewModel.brandImageName == "american-express")
-
-        viewModel.cardNumber = validDiscover
-        #expect(viewModel.brandImageName == "discover")
-
-        viewModel.cardNumber = validMasterCard
-        #expect(viewModel.brandImageName == "mastercard")
-
-        viewModel.cardNumber = validVisa
-        #expect(viewModel.brandImageName == "visa")
-
-        viewModel.cardNumber = "123456789"
-        #expect(viewModel.brandImageName == nil)
-    }
-
-    @Test
-    func testIsValidProperty() {
-        viewModel.cardNumber = validVisa
+    func testCardValidation() {
+        mockValidator.validationResult = true
+        mockValidator.detectedCardType = .masterCard
         #expect(viewModel.isValid)
-
-        viewModel.cardNumber = "123456789"
+        
+        mockValidator.validationResult = false
         #expect(!viewModel.isValid)
-
-        viewModel.cardNumber = validAmex
-        #expect(viewModel.isValid)
-
-        viewModel.cardNumber = validDiscover
-        #expect(viewModel.isValid)
-
-        viewModel.cardNumber = validMasterCard
-        #expect(viewModel.isValid)
+    }
+    
+    @Test
+    func testLimitUserInput() {
+        let longInput = "123456789012345678901234567890"
+        viewModel.limitUserInput(value: longInput)
+        #expect(viewModel.cardNumber.count == 20)
+        
+        let nonNumericInput = "abcd1234efgh5678"
+        viewModel.limitUserInput(value: nonNumericInput)
+        #expect(viewModel.cardNumber == "12345678")
     }
 }
 
+// MARK: - Mocks
+
+extension CardViewModelTests {
+    class MockCardValidator: CardValidatorRepresentable {
+        var detectedCardType: CardType = .unknown
+        var validationResult: Bool = false
+        var cardNumber: String = ""
+        
+        func detectCardType(from number: String) -> CardType {
+            return detectedCardType
+        }
+        
+        func isValidCard(_ number: String) -> Bool {
+            return validationResult
+        }
+    }
+}

@@ -2,7 +2,7 @@
 //  Theme.swift
 //  CCValidator
 //
-//  Created by mac on 6.03.25.
+//  Created by mac on 5.03.25.
 //
 
 import SwiftUI

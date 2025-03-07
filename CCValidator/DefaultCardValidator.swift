@@ -2,17 +2,17 @@
 //  DefaultCardValidator.swift
 //  CCValidator
 //
-//  Created by mac on 6.03.25.
+//  Created by mac on 5.03.25.
 //
 
 import Foundation
 
-protocol CardValidator {
+protocol CardValidatorRepresentable: ObservableObject {
     func detectCardType(from number: String) -> CardType
     func isValidCard(_ number: String) -> Bool
 }
 
-class DefaultCardValidator: CardValidator {
+class DefaultCardValidator: CardValidatorRepresentable {
     /// Detects the brand of the card based on the provided string of numbers.
     /// Currently supported types are American Express, Visa, Mastercard and Discover.
     func detectCardType(from number: String) -> CardType {
@@ -32,6 +32,7 @@ class DefaultCardValidator: CardValidator {
 
     /// Detects if the provided card number is valid using the Luhn validity algorithm.
     func isValidCard(_ number: String) -> Bool {
+        guard !number.isEmpty else { return false }
         let digits = number.filter(\.isNumber).compactMap(\.wholeNumberValue).reversed()
 
         let totalSum = digits.enumerated().reduce(into: 0) { sum, pair in

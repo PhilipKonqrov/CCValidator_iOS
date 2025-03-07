@@ -2,7 +2,7 @@
 //  CardViewModel.swift
 //  CCValidator
 //
-//  Created by mac on 6.03.25.
+//  Created by mac on 5.03.25.
 //
 
 import Foundation
@@ -25,30 +25,28 @@ enum CardType: String {
     }
 }
 
-protocol CardValidatorRepresentable: ObservableObject {
+protocol CardViewModelRepresentable: ObservableObject {
     var cardNumber: String { get set }
     var cardType: CardType { get }
     var isValid: Bool { get }
-    var validator: CardValidator { get }
+    var validator: any CardValidatorRepresentable { get }
     
     func limitUserInput(value: String)
 }
 
-class CardValidatorModel: ObservableObject, CardValidatorRepresentable {
-    let validator: CardValidator
+class CardViewModel: ObservableObject, CardViewModelRepresentable {
+    let validator: any CardValidatorRepresentable
     var cardType: CardType { validator.detectCardType(from: cardNumber) }
     var isValid: Bool { validator.isValidCard(cardNumber) && cardType != .unknown }
     
     @Published var cardNumber: String = ""
         
-    init(validator: CardValidator = DefaultCardValidator()) {
+    init(validator: any CardValidatorRepresentable = DefaultCardValidator()) {
         self.validator = validator
     }
     
     func limitUserInput(value: String) {
         let num = value.filter { $0.isNumber }
-        if num.count > 20 {
-            cardNumber = String(num.prefix(20))
-        }
+        cardNumber = String(num.prefix(20))
     }
 }

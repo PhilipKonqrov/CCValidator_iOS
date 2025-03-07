@@ -2,15 +2,14 @@
 //  ThemeTests.swift
 //  CCValidatorTests
 //
-//  Created by mac on 6.03.25.
+//  Created by mac on 5.03.25.
 //
 
 import Testing
 import SwiftUI
 @testable import CCValidator
 
-class ThemeTests {
-
+struct ThemeTests {
     @Test
     func testBackgroundColor() {
         let backgroundColor = Theme.Colors.backgroundColor
@@ -20,7 +19,6 @@ class ThemeTests {
     @Test
     func testTextColor() {
         let textColor = Theme.Colors.textColor
-        
         #expect(textColor == .white)
     }
     

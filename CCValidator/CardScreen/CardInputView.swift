@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardInputView<ViewModel: CardValidatorRepresentable>: View {
+struct CardInputView<ViewModel: CardViewModelRepresentable>: View {
     @ObservedObject private var viewModel: ViewModel
     
     init(viewModel: ViewModel) {

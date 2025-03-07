@@ -19,6 +19,8 @@
 		04B58A302D79C07E00146211 /* ThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B58A2F2D79C07E00146211 /* ThemeTests.swift */; };
 		04B58A322D79CC0800146211 /* CardInputViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B58A312D79CC0800146211 /* CardInputViewTests.swift */; };
 		923AAA2E2D79D10F00AE35AA /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 923AAA2D2D79D10F00AE35AA /* ViewInspector */; };
+		9252527D2D7ADB7B009DBAA2 /* DefaultCardValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9252527C2D7ADB7B009DBAA2 /* DefaultCardValidatorTests.swift */; };
+		925252802D7ADEA8009DBAA2 /* CardTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9252527F2D7ADEA8009DBAA2 /* CardTypeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		04B58A2F2D79C07E00146211 /* ThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTests.swift; sourceTree = "<group>"; };
 		04B58A312D79CC0800146211 /* CardInputViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInputViewTests.swift; sourceTree = "<group>"; };
 		9252527A2D79DE7B009DBAA2 /* CCValidator.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CCValidator.xctestplan; sourceTree = "<group>"; };
+		9252527C2D7ADB7B009DBAA2 /* DefaultCardValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCardValidatorTests.swift; sourceTree = "<group>"; };
+		9252527F2D7ADEA8009DBAA2 /* CardTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTypeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				049F96152D789795003D78D4 /* CardValidatorModelTests.swift */,
 				04B58A2F2D79C07E00146211 /* ThemeTests.swift */,
 				04B58A312D79CC0800146211 /* CardInputViewTests.swift */,
+				9252527C2D7ADB7B009DBAA2 /* DefaultCardValidatorTests.swift */,
+				9252527F2D7ADEA8009DBAA2 /* CardTypeTests.swift */,
 			);
 			path = CCValidatorTests;
 			sourceTree = "<group>";
@@ -247,7 +253,9 @@
 			files = (
 				049F96162D789795003D78D4 /* CardValidatorModelTests.swift in Sources */,
 				04B58A302D79C07E00146211 /* ThemeTests.swift in Sources */,
+				9252527D2D7ADB7B009DBAA2 /* DefaultCardValidatorTests.swift in Sources */,
 				04B58A322D79CC0800146211 /* CardInputViewTests.swift in Sources */,
+				925252802D7ADEA8009DBAA2 /* CardTypeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
