@@ -13,7 +13,7 @@ struct Theme {
         static let textColor = Color.white
     }
     
-    struct Gradients: Equatable, ShapeStyle {
+    struct Gradients {
         static let validGradient = Gradient(name: "validGradient", value: LinearGradient(
             colors: [.blue, .cyan, .green],
             startPoint: .topLeading,
@@ -23,23 +23,19 @@ struct Theme {
             startPoint: .topLeading,
             endPoint: .bottomTrailing))
         
-        struct Gradient: Equatable {
+        struct Gradient {
             let id = UUID()
             let name: String
             let value: LinearGradient
-            
-            static func == (lhs: Gradient, rhs: Gradient) -> Bool {
-                lhs.id == rhs.id
-            }
         }
     }
     
-    struct Symbols {
+    enum Symbols {
         static let checkmark = "checkmark.circle.fill"
         static let xCircle = "x.circle.fill"
     }
-    
-    struct Strings {
+
+    enum Strings {
         static let enterCardNumber = "Enter card number"
         static let valid = "Valid"
         static let invalid = "Invalid"

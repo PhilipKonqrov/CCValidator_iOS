@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046EA2382D7AC79600A25E30 /* DefaultCardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA2372D7AC79600A25E30 /* DefaultCardValidator.swift */; };
 		049F96042D789792003D78D4 /* CCValidatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F96032D789792003D78D4 /* CCValidatorApp.swift */; };
 		049F96062D789792003D78D4 /* CardInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F96052D789792003D78D4 /* CardInputView.swift */; };
 		049F96082D789795003D78D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049F96072D789795003D78D4 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		046EA2372D7AC79600A25E30 /* DefaultCardValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCardValidator.swift; sourceTree = "<group>"; };
 		049F96002D789792003D78D4 /* CCValidator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCValidator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049F96032D789792003D78D4 /* CCValidatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCValidatorApp.swift; sourceTree = "<group>"; };
 		049F96052D789792003D78D4 /* CardInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInputView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				925252792D79DC8F009DBAA2 /* CardScreen */,
 				049F96032D789792003D78D4 /* CCValidatorApp.swift */,
+				046EA2372D7AC79600A25E30 /* DefaultCardValidator.swift */,
 				04B58A2B2D79B7F200146211 /* Theme.swift */,
 				049F96072D789795003D78D4 /* Assets.xcassets */,
 				04B58A2D2D79B91100146211 /* Localizable.xcstrings */,
@@ -232,6 +235,7 @@
 			files = (
 				049F96062D789792003D78D4 /* CardInputView.swift in Sources */,
 				04B58A2C2D79B7F300146211 /* Theme.swift in Sources */,
+				046EA2382D7AC79600A25E30 /* DefaultCardValidator.swift in Sources */,
 				049F96042D789792003D78D4 /* CCValidatorApp.swift in Sources */,
 				04B58A2A2D79889300146211 /* CardViewModel.swift in Sources */,
 			);

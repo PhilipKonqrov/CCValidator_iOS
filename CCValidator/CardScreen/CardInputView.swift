@@ -21,7 +21,6 @@ struct CardInputView<ViewModel: CardValidatorRepresentable>: View {
                 cardInputField
                 cardValidationView
             }
-            .cornerRadius(8)
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(Theme.Colors.textColor, lineWidth: 2)
@@ -29,6 +28,7 @@ struct CardInputView<ViewModel: CardValidatorRepresentable>: View {
             .background(
                 viewModel.isValid ? Theme.Gradients.validGradient.value : Theme.Gradients.invalidGradient.value
             )
+            .cornerRadius(8)
             .shadow(radius: 10)
             .padding()
         }
@@ -45,11 +45,8 @@ struct CardInputView<ViewModel: CardValidatorRepresentable>: View {
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .padding(.horizontal)
             .padding(.vertical, 6)
-            .onChange(of: viewModel.cardNumber) { oldValue, newValue in
-                let num = newValue.filter { $0.isNumber }
-                if num.count > 20 {
-                    viewModel.cardNumber = String(newValue.prefix(20))
-                }
+            .onChange(of: viewModel.cardNumber) { _, newValue in
+                viewModel.limitUserInput(value: newValue)
             }
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
@@ -61,7 +58,7 @@ struct CardInputView<ViewModel: CardValidatorRepresentable>: View {
         VStack {
             HStack {
                 Spacer()
-                if let image = viewModel.brandImageName {
+                if let image = viewModel.cardType.brandImageName {
                     Image(image)
                         .resizable()
                         .frame(width: 50, height: 30)
